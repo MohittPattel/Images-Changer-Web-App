@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1 style="text-align: center; padding:1rem; background: black; color: grey;">
+      Image Changer
+    </h1>
+    <img
+      id="myImage"
+      src="logo1.jpg"
+      style="width: 100%; height: 350;"
+    />
+    <button
+      onclick="func1(1)"
+      style="
+        background-color: black;
+        color: white;
+        padding: 20px;
+        font-size: 1.5rem;
+      "
+    >
+      Change the Image
+    </button>
+    <button
+      monclick="func1(0)"
+      style="
+        background-color: white;
+        color: black;
+        padding: 20px;
+        font-size: 1.5rem;
+        float: right;
+      "
+    >
+      Reset the Image
+    </button>
+    <script>
+      function func(argu) {
+        var pic;
+        if (argu == 0){
+           pic = "logo1.jpg"
+           }
+        else{
+           pic = "https://source.unsplash.com/random"
+           }
+
+        document.getElementById("myImage").src = pic;
+      }
+    </script>
+  </body>
+</html>
